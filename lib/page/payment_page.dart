@@ -70,8 +70,8 @@ class _PaymentPageState extends State<PaymentPage> {
           'Check Out',
         ),
       ),
-       resizeToAvoidBottomInset: true,
-      body: Expanded(
+      resizeToAvoidBottomInset: true,
+      body: SingleChildScrollView(
         child: Column(
           children: [
             CreditCardWidget(
@@ -97,7 +97,9 @@ class _PaymentPageState extends State<PaymentPage> {
               },
               formKey: formkey,
             ),
-            const Spacer(),
+            SizedBox(
+              height: 150,
+            ),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: CustomButtom(onTap: userPay, text: 'Pay Now'),
